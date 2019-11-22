@@ -18,6 +18,48 @@ class SockController {
         let fetchRequest: NSFetchRequest<Sock> = Sock.fetchRequest()
         let moc = CoreDataStack.context
         sockDrawer = (try? moc.fetch(fetchRequest)) ?? []
-        
+    }
+    
+    //MARK: - CREATE
+    
+    //create a sock
+    
+    
+    
+    //MARK: - UPDATE
+    
+    //addphoto to sock
+    
+    //toggle favorite
+    
+    
+    //toggle lost/unlost
+    
+    //change note
+    
+    //change vibe
+    
+    //change website
+    
+    
+    //change colors
+    
+    
+    
+    //MARK: - DELETE
+    
+    func deleteSock(_ sock: Sock) {
+        if let moc = sock.managedObjectContext {
+            moc.delete(sock)
+            saveToPersistenceStore()
+        }
+    }
+    
+    //MARK: - PERSISTENCE
+    
+    func saveToPersistenceStore() {
+        if CoreDataStack.context.hasChanges {
+            try? CoreDataStack.context.save()
+        }
     }
 }
