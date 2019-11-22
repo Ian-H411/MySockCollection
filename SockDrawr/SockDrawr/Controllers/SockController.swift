@@ -38,11 +38,28 @@ class SockController {
     //change note
     
     //change vibe
+    func changeVibe(sock: Sock, vibe: String) {
+        sock.vibe = vibe
+        saveToPersistenceStore()
+    }
     
     //change website
+    func changeSocksWebsite(sock: Sock, website: String) {
+        sock.websiteLink = website
+        saveToPersistenceStore()
+    }
     
     
     //change colors
+    func changeSocksPrimary(sock: Sock, primary color: String) {
+        sock.primaryColor = color
+        saveToPersistenceStore()
+    }
+    
+    func changeSocksSecondary(sock: Sock, secondary color: String) {
+        sock.secondaryColor = color
+        saveToPersistenceStore()
+    }
     
     
     

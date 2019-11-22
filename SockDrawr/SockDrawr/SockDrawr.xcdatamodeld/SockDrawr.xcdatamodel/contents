@@ -9,9 +9,9 @@
         <attribute name="note" optional="YES" attributeType="String"/>
         <attribute name="photoData" optional="YES" attributeType="Binary"/>
         <attribute name="primaryColor" optional="YES" attributeType="String"/>
-        <attribute name="secondaryColor" optional="YES" attributeType="String"/>
-        <attribute name="vibe" optional="YES" attributeType="String"/>
-        <attribute name="websiteLink" optional="YES" attributeType="String"/>
+        <attribute name="secondaryColor" attributeType="String"/>
+        <attribute name="vibe" attributeType="String"/>
+        <attribute name="websiteLink" attributeType="String"/>
     </entity>
     <elements>
         <element name="Sock" positionX="-63" positionY="-18" width="128" height="208"/>
