@@ -10,7 +10,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        TabView() {
+            Text("Sock Drawer").tabItem { Text("Sock Drawer") }.tag(1)
+            Text("Tab Content 2").tabItem { Text("Schedule") }.tag(2)
+        }
     }
 }
 
