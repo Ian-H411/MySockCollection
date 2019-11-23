@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UIKit.UIImage
 
 class SockController {
     static let shared = SockController()
@@ -21,16 +22,31 @@ class SockController {
     }
     
     //MARK: - CREATE
+    func create(sock: Sock, sockName: String, isFavorite: Bool, primaryColor: String?, secondaryColor: String?, image: UIImage?) {
     
-    //create a sock
+        let newSock = Sock(name: sockName , isFavorite: isFavorite, PrimaryColor: primaryColor ?? "", secondaryColor: secondaryColor ?? "")
+        if let sockPic = image {
+            changeSocksPhoto(sock: newSock, image: sockPic)
+        }
+        sockDrawer.append(newSock)
+        saveToPersistenceStore()
+    }
     
     
     
     //MARK: - UPDATE
     
     //addphoto to sock
+    func changeSocksPhoto(sock: Sock, image: UIImage) {
+        sock.photo = image
+        saveToPersistenceStore()
+    }
     
     //toggle favorite
+    func toggleFavorite(sock: Sock) {
+        sock.isFavorite.toggle()
+        saveToPersistenceStore()
+    }
     
     
     //toggle lost/unlost
