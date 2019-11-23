@@ -17,6 +17,8 @@ extension Sock {
         self.isFavorite = isFavorite
         self.primaryColor = PrimaryColor
         self.secondaryColor = secondaryColor
+        self.vibe = ""
+        self.note = ""
     }
     
     var photo: UIImage? {
