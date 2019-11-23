@@ -20,6 +20,7 @@ extension Sock {
         self.primaryColor = ""
         self.secondaryColor = ""
         self.vibe = ""
+        self.note = ""
     }
     
     var photo: UIImage? {

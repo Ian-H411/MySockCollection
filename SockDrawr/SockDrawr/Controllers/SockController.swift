@@ -34,8 +34,21 @@ class SockController {
     
     
     //toggle lost/unlost
+    func toggleLostLeftSock(sock: Sock) {
+        sock.isLeftMissing.toggle()
+        saveToPersistenceStore()
+    }
+    
+    func toggleLostRightSock(sock: Sock) {
+        sock.isRightMissing.toggle()
+        saveToPersistenceStore()
+    }
     
     //change note
+    func changeNote(sock: Sock, note: String) {
+        sock.note = note
+        saveToPersistenceStore()
+    }
     
     //change vibe
     func changeVibe(sock: Sock, vibe: String) {
