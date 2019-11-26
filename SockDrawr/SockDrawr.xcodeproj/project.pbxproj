@@ -17,6 +17,8 @@
 		25D6B6752388917C00F713C4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B6742388917C00F713C4 /* CoreDataStack.swift */; };
 		25D6B6772388924600F713C4 /* Sock+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B6762388924600F713C4 /* Sock+Convenience.swift */; };
 		25D6B6792388A94100F713C4 /* SockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B6782388A94100F713C4 /* SockController.swift */; };
+		25D6B67B238CB8DB00F713C4 /* SockCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B67A238CB8DB00F713C4 /* SockCollectionView.swift */; };
+		25D6B67E238CBE8500F713C4 /* collectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B67D238CBE8500F713C4 /* collectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		25D6B6742388917C00F713C4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		25D6B6762388924600F713C4 /* Sock+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sock+Convenience.swift"; sourceTree = "<group>"; };
 		25D6B6782388A94100F713C4 /* SockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SockController.swift; sourceTree = "<group>"; };
+		25D6B67A238CB8DB00F713C4 /* SockCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SockCollectionView.swift; sourceTree = "<group>"; };
+		25D6B67D238CBE8500F713C4 /* collectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				25D6B66023888EFA00F713C4 /* ContentView.swift */,
+				25D6B67C238CBE5000F713C4 /* CollectionView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +122,15 @@
 				25D6B6762388924600F713C4 /* Sock+Convenience.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		25D6B67C238CBE5000F713C4 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				25D6B67A238CB8DB00F713C4 /* SockCollectionView.swift */,
+				25D6B67D238CBE8500F713C4 /* collectionViewCell.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,10 +206,12 @@
 			files = (
 				25D6B6792388A94100F713C4 /* SockController.swift in Sources */,
 				25D6B6752388917C00F713C4 /* CoreDataStack.swift in Sources */,
+				25D6B67B238CB8DB00F713C4 /* SockCollectionView.swift in Sources */,
 				25D6B65A23888EFA00F713C4 /* AppDelegate.swift in Sources */,
 				25D6B65C23888EFA00F713C4 /* SceneDelegate.swift in Sources */,
 				25D6B66123888EFA00F713C4 /* ContentView.swift in Sources */,
 				25D6B65F23888EFA00F713C4 /* SockDrawr.xcdatamodeld in Sources */,
+				25D6B67E238CBE8500F713C4 /* collectionViewCell.swift in Sources */,
 				25D6B6772388924600F713C4 /* Sock+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
