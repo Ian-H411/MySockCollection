@@ -10,15 +10,13 @@
 		25D6B65A23888EFA00F713C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B65923888EFA00F713C4 /* AppDelegate.swift */; };
 		25D6B65C23888EFA00F713C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B65B23888EFA00F713C4 /* SceneDelegate.swift */; };
 		25D6B65F23888EFA00F713C4 /* SockDrawr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B65D23888EFA00F713C4 /* SockDrawr.xcdatamodeld */; };
-		25D6B66123888EFA00F713C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B66023888EFA00F713C4 /* ContentView.swift */; };
 		25D6B66323888F0000F713C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25D6B66223888F0000F713C4 /* Assets.xcassets */; };
 		25D6B66623888F0000F713C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25D6B66523888F0000F713C4 /* Preview Assets.xcassets */; };
 		25D6B66923888F0000F713C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25D6B66723888F0000F713C4 /* LaunchScreen.storyboard */; };
 		25D6B6752388917C00F713C4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B6742388917C00F713C4 /* CoreDataStack.swift */; };
 		25D6B6772388924600F713C4 /* Sock+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B6762388924600F713C4 /* Sock+Convenience.swift */; };
 		25D6B6792388A94100F713C4 /* SockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B6782388A94100F713C4 /* SockController.swift */; };
-		25D6B67B238CB8DB00F713C4 /* SockCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B67A238CB8DB00F713C4 /* SockCollectionView.swift */; };
-		25D6B67E238CBE8500F713C4 /* collectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B67D238CBE8500F713C4 /* collectionViewCell.swift */; };
+		25D6B6802394C45900F713C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25D6B67F2394C45900F713C4 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +24,6 @@
 		25D6B65923888EFA00F713C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25D6B65B23888EFA00F713C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		25D6B65E23888EFA00F713C4 /* SockDrawr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SockDrawr.xcdatamodel; sourceTree = "<group>"; };
-		25D6B66023888EFA00F713C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		25D6B66223888F0000F713C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25D6B66523888F0000F713C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		25D6B66823888F0000F713C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,8 +31,7 @@
 		25D6B6742388917C00F713C4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		25D6B6762388924600F713C4 /* Sock+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sock+Convenience.swift"; sourceTree = "<group>"; };
 		25D6B6782388A94100F713C4 /* SockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SockController.swift; sourceTree = "<group>"; };
-		25D6B67A238CB8DB00F713C4 /* SockCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SockCollectionView.swift; sourceTree = "<group>"; };
-		25D6B67D238CBE8500F713C4 /* collectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewCell.swift; sourceTree = "<group>"; };
+		25D6B67F2394C45900F713C4 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +106,7 @@
 		25D6B6722388906900F713C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				25D6B66023888EFA00F713C4 /* ContentView.swift */,
-				25D6B67C238CBE5000F713C4 /* CollectionView */,
+				25D6B67F2394C45900F713C4 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,15 +117,6 @@
 				25D6B6762388924600F713C4 /* Sock+Convenience.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		25D6B67C238CBE5000F713C4 /* CollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				25D6B67A238CB8DB00F713C4 /* SockCollectionView.swift */,
-				25D6B67D238CBE8500F713C4 /* collectionViewCell.swift */,
-			);
-			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +180,7 @@
 				25D6B66923888F0000F713C4 /* LaunchScreen.storyboard in Resources */,
 				25D6B66623888F0000F713C4 /* Preview Assets.xcassets in Resources */,
 				25D6B66323888F0000F713C4 /* Assets.xcassets in Resources */,
+				25D6B6802394C45900F713C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,12 +193,9 @@
 			files = (
 				25D6B6792388A94100F713C4 /* SockController.swift in Sources */,
 				25D6B6752388917C00F713C4 /* CoreDataStack.swift in Sources */,
-				25D6B67B238CB8DB00F713C4 /* SockCollectionView.swift in Sources */,
 				25D6B65A23888EFA00F713C4 /* AppDelegate.swift in Sources */,
 				25D6B65C23888EFA00F713C4 /* SceneDelegate.swift in Sources */,
-				25D6B66123888EFA00F713C4 /* ContentView.swift in Sources */,
 				25D6B65F23888EFA00F713C4 /* SockDrawr.xcdatamodeld in Sources */,
-				25D6B67E238CBE8500F713C4 /* collectionViewCell.swift in Sources */,
 				25D6B6772388924600F713C4 /* Sock+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
