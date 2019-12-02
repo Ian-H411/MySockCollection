@@ -17,7 +17,13 @@ class SockCollectionViewController: UICollectionViewController {
         var tempArray = [[Sock]]()
         for sock in socks {
             let endIndex = tempArray.endIndex
-            
+            if tempArray.isEmpty{
+                tempArray.append([sock])
+            } else if tempArray[endIndex].count == 1{
+                tempArray[endIndex].append(sock)
+            } else if tempArray[endIndex].count == 2 {
+                tempArray.append([sock])
+            }
         }
         return tempArray
     }
