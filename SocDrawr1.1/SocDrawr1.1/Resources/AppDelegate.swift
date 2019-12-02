@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  SockDrawr
+//  SocDrawr1.1
 //
-//  Created by Ian Hall on 11/22/19.
+//  Created by Ian Hall on 12/1/19.
 //  Copyright © 2019 Ian Hall. All rights reserved.
 //
 
@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "SockDrawr")
+        let container = NSPersistentContainer(name: "SocDrawr1_1")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

@@ -1,8 +1,8 @@
 //
 //  CoreDataStack.swift
-//  SockDrawr
+//  SocDrawr1.1
 //
-//  Created by Ian Hall on 11/22/19.
+//  Created by Ian Hall on 12/1/19.
 //  Copyright © 2019 Ian Hall. All rights reserved.
 //
 
