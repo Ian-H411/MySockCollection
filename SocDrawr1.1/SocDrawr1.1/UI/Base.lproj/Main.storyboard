@@ -68,6 +68,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gXd-5c-VeR">
                             <connections>
                                 <action selector="addSockButton:" destination="FXL-JB-VfH" id="F6s-xC-A7f"/>
+                                <segue destination="AmY-9a-b4g" kind="show" identifier="addSock" id="c3g-lo-8AY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

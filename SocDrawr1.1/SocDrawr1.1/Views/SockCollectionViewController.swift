@@ -12,6 +12,8 @@ private let reuseIdentifier = "Cell"
 
 class SockCollectionViewController: UICollectionViewController {
 
+    //MARK: - Properties
+    
     var dataSource: [[Sock]] {
         let socks = SockController.shared.sockDrawer
         var tempArray = [[Sock]]()
@@ -28,6 +30,10 @@ class SockCollectionViewController: UICollectionViewController {
         return tempArray
     }
     
+    var image: UIImage?
+    
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,15 +41,18 @@ class SockCollectionViewController: UICollectionViewController {
 
     }
 
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "addSock" {
+            if let destinationVC = segue.destination as? AddSockViewController {
+                guard let picture = image else {return}
+                destinationVC.imageLandingPad = picture
+            }
+        }
     }
-    */
+
 
     // MARK: UICollectionViewDataSource
 
@@ -152,8 +161,10 @@ extension SockCollectionViewController: UIImagePickerControllerDelegate, UINavig
         self.dismiss(animated: true, completion: nil)
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[.originalImage] as? UIImage{
-            
+        if let imagefound = info[.originalImage] as? UIImage{
+            image = imagefound
+            self.dismiss(animated: true, completion: nil)
+            self.performSegue(withIdentifier: "addSock", sender: nil)
         } else {
             print("Something went wrong")
         }
