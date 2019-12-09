@@ -12,6 +12,8 @@ private let reuseIdentifier = "Cell"
 
 class SockCollectionViewController: UICollectionViewController {
 
+    //MARK: - Properties
+    
     var dataSource: [[Sock]] {
         let socks = SockController.shared.sockDrawer
         var tempArray = [[Sock]]()
@@ -28,6 +30,10 @@ class SockCollectionViewController: UICollectionViewController {
         return tempArray
     }
     
+    var image: UIImage?
+    
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,15 +41,18 @@ class SockCollectionViewController: UICollectionViewController {
 
     }
 
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "addSock" {
+            if let destinationVC = segue.destination as? AddSockViewController {
+                guard let picture = image else {return}
+                destinationVC.imageLandingPad = picture
+            }
+        }
     }
-    */
+
 
     // MARK: UICollectionViewDataSource
 
@@ -55,7 +64,7 @@ class SockCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 2
+        return dataSource.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -96,4 +105,69 @@ class SockCollectionViewController: UICollectionViewController {
     }
     */
 
+    
+    //MARK: - Actions
+    
+    @IBAction func addSockButton(_ sender: Any) {
+        presentActionSheet()
+    }
+    
+    
+    
+    
+    //MARK: - Helpers
+    
+    func camera(){
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            let myPickerController = UIImagePickerController()
+            myPickerController.delegate = self
+            myPickerController.sourceType = .camera
+            self.present(myPickerController, animated: true , completion: nil)
+        }
+    }
+    
+    func photoLibrary() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            let mypickerController = UIImagePickerController()
+            mypickerController.delegate = self
+            mypickerController.sourceType = .photoLibrary
+            self.present(mypickerController, animated: true, completion: nil)
+        }
+    }
+    
+    func presentActionSheet(){
+        let actionSheet = UIAlertController(title: "Import Receipt Photo", message: nil, preferredStyle: .actionSheet)
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            let cameraButton = UIAlertAction(title: "Import With Camera", style: .default) { (_) in
+                self.camera()
+            }
+            actionSheet.addAction(cameraButton)
+        }
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            let photoLibrary = UIAlertAction(title: "Import From Photo Library", style: .default) { (_) in
+                self.photoLibrary()
+            }
+            actionSheet.addAction(photoLibrary)
+        }
+        let cancelButton = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        actionSheet.addAction(cancelButton)
+        self.present(actionSheet, animated: true, completion: nil)
+    }
+    
+}
+extension SockCollectionViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let imagefound = info[.originalImage] as? UIImage{
+            image = imagefound
+            self.dismiss(animated: true, completion: nil)
+            self.performSegue(withIdentifier: "addSock", sender: nil)
+        } else {
+            print("Something went wrong")
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
 }
