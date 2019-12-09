@@ -65,11 +65,12 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="BKi-r1-RmN">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gXd-5c-VeR"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gXd-5c-VeR">
+                            <connections>
+                                <action selector="addSockButton:" destination="FXL-JB-VfH" id="F6s-xC-A7f"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="AmY-9a-b4g" kind="show" identifier="AddSock" id="JDp-0h-Klr"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cN-DY-9wa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
