@@ -9,7 +9,23 @@
 import UIKit
 
 class AddSockViewController: UIViewController {
-
+//MARK: - Properties
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var favoriteButton: UIButton!
+    
+    @IBOutlet weak var primaryColorLabel: UILabel!
+    
+    @IBOutlet weak var primaryColorButton: UIButton!
+    
+    @IBOutlet weak var sockImageView: UIImageView!
+    
+    @IBOutlet weak var tagsTextField: UITextView!
+    
+    @IBOutlet weak var noteTextField: UITextView!
+    
+    
     //MARK: - Variables
     
     var imageLandingPad: UIImage?
@@ -22,15 +38,31 @@ class AddSockViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - Actions
+    
+    @IBAction func primaryColorButtonTapped(_ sender: Any) {
     }
-    */
+    
+    
+    @IBAction func favoriteButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+    }
+    
+    
+    //MARK: - Helper Functions
+    
+    
+   
 
 }
+//MARK: - Extensions
+
+extension AddSockViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.resignFirstResponder()
+        return true
+    }
+}
+

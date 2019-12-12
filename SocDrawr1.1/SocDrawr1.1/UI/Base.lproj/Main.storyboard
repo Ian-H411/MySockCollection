@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="1135" y="189"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Sock View Controller-->
         <scene sceneID="YfW-II-Y7s">
             <objects>
-                <viewController id="AmY-9a-b4g" sceneMemberID="viewController">
+                <viewController id="AmY-9a-b4g" customClass="AddSockViewController" customModule="SocDrawr1_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SxN-1a-2P4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,6 +114,9 @@
                                                             <constraint firstAttribute="height" constant="44" id="Riw-dM-5dp"/>
                                                         </constraints>
                                                         <state key="normal" image="star" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="favoriteButtonTapped:" destination="AmY-9a-b4g" eventType="touchUpInside" id="SBC-JS-3ZI"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primary Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4h-Wi-U4m">
                                                         <rect key="frame" x="0.0" y="122" width="172.5" height="44"/>
@@ -130,6 +133,9 @@
                                                             <constraint firstAttribute="height" constant="44" id="5e5-oy-gqi"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="primaryColorButtonTapped:" destination="AmY-9a-b4g" eventType="touchUpInside" id="U4C-19-caI"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -190,7 +196,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WLI-w2-v4z"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gBq-eq-2NK"/>
+                    <navigationItem key="navigationItem" id="gBq-eq-2NK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Ai6-dc-Twe">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="AmY-9a-b4g" id="DYH-z4-cZn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="favoriteButton" destination="lF5-ES-ffr" id="hcI-4c-aDt"/>
+                        <outlet property="nameTextField" destination="S5A-Si-Lsd" id="qYo-J5-xSJ"/>
+                        <outlet property="noteTextField" destination="JDn-50-9RE" id="pJ5-gd-FXn"/>
+                        <outlet property="primaryColorButton" destination="Xb3-7U-TZ4" id="d2O-cu-BGT"/>
+                        <outlet property="primaryColorLabel" destination="j4h-Wi-U4m" id="UYf-bW-75c"/>
+                        <outlet property="sockImageView" destination="jlU-TM-OBR" id="sfg-Pd-WuT"/>
+                        <outlet property="tagsTextField" destination="SHq-n9-SbR" id="rUD-Rj-qOW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1c-3V-Mk7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
