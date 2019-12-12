@@ -34,8 +34,7 @@ class AddSockViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initialSetUp()
     }
     
     //MARK: - Actions
@@ -53,7 +52,11 @@ class AddSockViewController: UIViewController {
     
     //MARK: - Helper Functions
     
-    
+    func initialSetUp() {
+        if let photo = imageLandingPad {
+            sockImageView.image = photo
+        }
+    }
    
 
 }
