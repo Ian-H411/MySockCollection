@@ -30,6 +30,8 @@ class AddSockViewController: UIViewController {
     
     var imageLandingPad: UIImage?
     
+    var isFavorite: Bool = false
+    
     //MARK: - lifecycle
     
     override func viewDidLoad() {
@@ -44,9 +46,19 @@ class AddSockViewController: UIViewController {
     
     
     @IBAction func favoriteButtonTapped(_ sender: Any) {
+        isFavorite.toggle()
+        if isFavorite {
+            favoriteButton.layer.backgroundColor = UIColor.red.cgColor
+        } else {
+            favoriteButton.layer.backgroundColor = UIColor.clear.cgColor
+        }
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
+        guard let name = nameTextField.text else {return}
+        guard let note = noteTextField.text else {return}
+        
+        SockController.shared.create(sockName: name, isFavorite: isFavorite, primaryColor: nil, secondaryColor: nil, image: imageLandingPad)
     }
     
     

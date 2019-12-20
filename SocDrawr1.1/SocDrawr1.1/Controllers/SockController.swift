@@ -21,7 +21,7 @@ class SockController {
     }
     
     //MARK: - CREATE
-    func create(sock: Sock, sockName: String, isFavorite: Bool, primaryColor: String?, secondaryColor: String?, image: UIImage?) {
+    func create(sockName: String, isFavorite: Bool, primaryColor: String?, secondaryColor: String?, image: UIImage?) {
     
         let newSock = Sock(name: sockName , isFavorite: isFavorite, PrimaryColor: primaryColor ?? "", secondaryColor: secondaryColor ?? "")
         if let sockPic = image {
