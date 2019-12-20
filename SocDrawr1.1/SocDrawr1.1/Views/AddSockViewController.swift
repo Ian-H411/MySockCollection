@@ -55,6 +55,10 @@ class AddSockViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
+        guard let name = nameTextField.text else {return}
+        guard let note = noteTextField.text else {return}
+        
+        SockController.shared.create(sockName: name, isFavorite: isFavorite, primaryColor: nil, secondaryColor: nil, image: imageLandingPad)
     }
     
     
