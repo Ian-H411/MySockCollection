@@ -58,7 +58,9 @@ class AddSockViewController: UIViewController {
         guard let name = nameTextField.text else {return}
         guard let note = noteTextField.text else {return}
         
-        SockController.shared.create(sockName: name, isFavorite: isFavorite, primaryColor: nil, secondaryColor: nil, image: imageLandingPad)
+        let sock = SockController.shared.create(sockName: name, isFavorite: isFavorite, primaryColor: nil, secondaryColor: nil, image: imageLandingPad)
+        SockController.shared.changeNote(sock: sock, note: note)
+        navigationController?.popViewController(animated: true)
     }
     
     
