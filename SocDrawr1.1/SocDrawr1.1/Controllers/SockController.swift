@@ -21,7 +21,7 @@ class SockController {
     }
     
     //MARK: - CREATE
-    func create(sockName: String, isFavorite: Bool, primaryColor: String?, secondaryColor: String?, image: UIImage?) {
+   @discardableResult func create(sockName: String, isFavorite: Bool, primaryColor: String?, secondaryColor: String?, image: UIImage?) -> Sock {
     
         let newSock = Sock(name: sockName , isFavorite: isFavorite, PrimaryColor: primaryColor ?? "", secondaryColor: secondaryColor ?? "")
         if let sockPic = image {
@@ -29,6 +29,7 @@ class SockController {
         }
         sockDrawer.append(newSock)
         saveToPersistenceStore()
+        return newSock
     }
     
     
