@@ -24,6 +24,8 @@ class AddSockViewController: UIViewController {
     
     @IBOutlet weak var colorPickerButton: UIButton!
     
+    var colorPicker: UIPickerView?
+    
     
     //MARK: - Variables
     
@@ -70,6 +72,20 @@ class AddSockViewController: UIViewController {
         if let photo = imageLandingPad {
             sockImageView.image = photo
         }
+        pickerViewSetUp()
+    }
+    
+    func pickerViewSetUp() {
+        let picker = UIPickerView()
+        picker.delegate = self
+        picker.dataSource = self
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+                 doneToolbar.barStyle = .default
+                 let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+                 let done: UIBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(self.doneButtonAction))
+                 let items = [flexSpace, done]
+                 doneToolbar.items = items
+                 doneToolbar.sizeToFit()
     }
    
 
