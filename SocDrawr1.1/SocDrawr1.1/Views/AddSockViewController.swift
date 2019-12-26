@@ -17,7 +17,8 @@ class AddSockViewController: UIViewController {
     
     @IBOutlet weak var primaryColorLabel: UILabel!
     
-    @IBOutlet weak var primaryColorButton: UIButton!
+    @IBOutlet weak var colorPicker: UIPickerView!
+    
     
     @IBOutlet weak var sockImageView: UIImageView!
     

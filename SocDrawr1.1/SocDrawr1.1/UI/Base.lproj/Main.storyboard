@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RYu-IT-j4K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RYu-IT-j4K">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -129,16 +129,9 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xb3-7U-TZ4">
-                                                        <rect key="frame" x="0.0" y="183" width="172.5" height="44"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="44" id="5e5-oy-gqi"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <connections>
-                                                            <action selector="primaryColorButtonTapped:" destination="AmY-9a-b4g" eventType="touchUpInside" id="U4C-19-caI"/>
-                                                        </connections>
-                                                    </button>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZmD-G5-aRq">
+                                                        <rect key="frame" x="0.0" y="183" width="172" height="44"/>
+                                                    </pickerView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -156,7 +149,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SHq-n9-SbR">
-                                                <rect key="frame" x="0.0" y="53" width="374" height="50"/>
+                                                <rect key="frame" x="0.0" y="53" width="374" height="44"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="Taq-Ei-lRh"/>
@@ -166,7 +159,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sND-R1-4dh">
-                                                <rect key="frame" x="0.0" y="112" width="45.5" height="44"/>
+                                                <rect key="frame" x="0.0" y="106" width="45.5" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="l3w-Xm-rWy"/>
                                                 </constraints>
@@ -175,7 +168,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JDn-50-9RE">
-                                                <rect key="frame" x="0.0" y="165" width="374" height="89.5"/>
+                                                <rect key="frame" x="0.0" y="159" width="374" height="95.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="6ec-0a-jRR"/>
@@ -206,10 +199,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="colorPicker" destination="ZmD-G5-aRq" id="JBq-Ks-h7G"/>
                         <outlet property="favoriteButton" destination="lF5-ES-ffr" id="hcI-4c-aDt"/>
                         <outlet property="nameTextField" destination="S5A-Si-Lsd" id="qYo-J5-xSJ"/>
                         <outlet property="noteTextField" destination="JDn-50-9RE" id="pJ5-gd-FXn"/>
-                        <outlet property="primaryColorButton" destination="Xb3-7U-TZ4" id="d2O-cu-BGT"/>
                         <outlet property="primaryColorLabel" destination="j4h-Wi-U4m" id="UYf-bW-75c"/>
                         <outlet property="sockImageView" destination="jlU-TM-OBR" id="sfg-Pd-WuT"/>
                         <outlet property="tagsTextField" destination="SHq-n9-SbR" id="rUD-Rj-qOW"/>
