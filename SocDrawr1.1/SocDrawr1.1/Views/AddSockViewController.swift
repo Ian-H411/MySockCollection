@@ -15,16 +15,14 @@ class AddSockViewController: UIViewController {
     
     @IBOutlet weak var favoriteButton: UIButton!
     
-    @IBOutlet weak var primaryColorLabel: UILabel!
-    
-    @IBOutlet weak var colorPicker: UIPickerView!
-    
     
     @IBOutlet weak var sockImageView: UIImageView!
     
     @IBOutlet weak var tagsTextField: UITextView!
     
     @IBOutlet weak var noteTextField: UITextView!
+    
+    @IBOutlet weak var colorPickerButton: UIButton!
     
     
     //MARK: - Variables
@@ -42,7 +40,8 @@ class AddSockViewController: UIViewController {
     
     //MARK: - Actions
     
-    @IBAction func primaryColorButtonTapped(_ sender: Any) {
+   
+    @IBAction func colorPickerButtonTapped(_ sender: Any) {
     }
     
     
@@ -82,5 +81,17 @@ extension AddSockViewController: UITextFieldDelegate {
         self.resignFirstResponder()
         return true
     }
+}
+
+extension AddSockViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        <#code#>
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        <#code#>
+    }
+    
+    
 }
 

@@ -100,7 +100,7 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="1iF-uQ-ptg">
-                                                <rect key="frame" x="201.5" y="14" width="172.5" height="227"/>
+                                                <rect key="frame" x="201.5" y="44.5" width="172.5" height="166"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S5A-Si-Lsd">
                                                         <rect key="frame" x="0.0" y="0.0" width="172.5" height="44"/>
@@ -120,18 +120,13 @@
                                                             <action selector="favoriteButtonTapped:" destination="AmY-9a-b4g" eventType="touchUpInside" id="SBC-JS-3ZI"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primary Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4h-Wi-U4m">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sO9-SL-Mv9">
                                                         <rect key="frame" x="0.0" y="122" width="172.5" height="44"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="44" id="2j1-4i-LuN"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZmD-G5-aRq">
-                                                        <rect key="frame" x="0.0" y="183" width="172" height="44"/>
-                                                    </pickerView>
+                                                        <state key="normal" title="Color"/>
+                                                        <connections>
+                                                            <action selector="colorPickerButtonTapped:" destination="AmY-9a-b4g" eventType="touchUpInside" id="xL3-E2-XOC"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -149,7 +144,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SHq-n9-SbR">
-                                                <rect key="frame" x="0.0" y="53" width="374" height="44"/>
+                                                <rect key="frame" x="0.0" y="53" width="374" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="Taq-Ei-lRh"/>
@@ -159,7 +154,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sND-R1-4dh">
-                                                <rect key="frame" x="0.0" y="106" width="45.5" height="44"/>
+                                                <rect key="frame" x="0.0" y="112" width="45.5" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="l3w-Xm-rWy"/>
                                                 </constraints>
@@ -168,7 +163,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JDn-50-9RE">
-                                                <rect key="frame" x="0.0" y="159" width="374" height="95.5"/>
+                                                <rect key="frame" x="0.0" y="165" width="374" height="89.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="6ec-0a-jRR"/>
@@ -199,11 +194,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="colorPicker" destination="ZmD-G5-aRq" id="JBq-Ks-h7G"/>
+                        <outlet property="colorPickerButton" destination="sO9-SL-Mv9" id="c8c-qF-KLW"/>
                         <outlet property="favoriteButton" destination="lF5-ES-ffr" id="hcI-4c-aDt"/>
                         <outlet property="nameTextField" destination="S5A-Si-Lsd" id="qYo-J5-xSJ"/>
                         <outlet property="noteTextField" destination="JDn-50-9RE" id="pJ5-gd-FXn"/>
-                        <outlet property="primaryColorLabel" destination="j4h-Wi-U4m" id="UYf-bW-75c"/>
                         <outlet property="sockImageView" destination="jlU-TM-OBR" id="sfg-Pd-WuT"/>
                         <outlet property="tagsTextField" destination="SHq-n9-SbR" id="rUD-Rj-qOW"/>
                     </connections>
