@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2573D31A23EB580C00675F42 /* ArrayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2573D31923EB580C00675F42 /* ArrayHelper.swift */; };
 		25D6B68E2394C50600F713C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B68D2394C50600F713C4 /* AppDelegate.swift */; };
 		25D6B6902394C50600F713C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B68F2394C50600F713C4 /* SceneDelegate.swift */; };
 		25D6B6922394C50600F713C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B6912394C50600F713C4 /* ViewController.swift */; };
@@ -17,12 +18,10 @@
 		25D6B6AA2394C5A600F713C4 /* SockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B6A92394C5A600F713C4 /* SockController.swift */; };
 		25D6B6AC2394C5CF00F713C4 /* Sock+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B6AB2394C5CF00F713C4 /* Sock+Convenience.swift */; };
 		25D6B6AE2394C69100F713C4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B6AD2394C69100F713C4 /* CoreDataStack.swift */; };
-		25D6B6B02394C85D00F713C4 /* SockCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B6AF2394C85D00F713C4 /* SockCollectionViewController.swift */; };
-		25D6B6B22399956700F713C4 /* SockCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B6B12399956700F713C4 /* SockCollectionViewCell.swift */; };
-		25D6B6B4239DF4E300F713C4 /* AddSockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6B6B3239DF4E300F713C4 /* AddSockViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2573D31923EB580C00675F42 /* ArrayHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayHelper.swift; sourceTree = "<group>"; };
 		25D6B68A2394C50600F713C4 /* SocDrawr1.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocDrawr1.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25D6B68D2394C50600F713C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25D6B68F2394C50600F713C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,9 +34,6 @@
 		25D6B6A92394C5A600F713C4 /* SockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SockController.swift; sourceTree = "<group>"; };
 		25D6B6AB2394C5CF00F713C4 /* Sock+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sock+Convenience.swift"; sourceTree = "<group>"; };
 		25D6B6AD2394C69100F713C4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		25D6B6AF2394C85D00F713C4 /* SockCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SockCollectionViewController.swift; sourceTree = "<group>"; };
-		25D6B6B12399956700F713C4 /* SockCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SockCollectionViewCell.swift; sourceTree = "<group>"; };
-		25D6B6B3239DF4E300F713C4 /* AddSockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSockViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +88,6 @@
 		25D6B6A52394C51500F713C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				25D6B6AF2394C85D00F713C4 /* SockCollectionViewController.swift */,
-				25D6B6B12399956700F713C4 /* SockCollectionViewCell.swift */,
-				25D6B6B3239DF4E300F713C4 /* AddSockViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -116,6 +109,7 @@
 				25D6B6992394C50900F713C4 /* Assets.xcassets */,
 				25D6B69B2394C50900F713C4 /* LaunchScreen.storyboard */,
 				25D6B6AD2394C69100F713C4 /* CoreDataStack.swift */,
+				2573D31923EB580C00675F42 /* ArrayHelper.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -199,12 +193,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25D6B6B02394C85D00F713C4 /* SockCollectionViewController.swift in Sources */,
 				25D6B6AE2394C69100F713C4 /* CoreDataStack.swift in Sources */,
 				25D6B6922394C50600F713C4 /* ViewController.swift in Sources */,
-				25D6B6B22399956700F713C4 /* SockCollectionViewCell.swift in Sources */,
-				25D6B6B4239DF4E300F713C4 /* AddSockViewController.swift in Sources */,
 				25D6B6AA2394C5A600F713C4 /* SockController.swift in Sources */,
+				2573D31A23EB580C00675F42 /* ArrayHelper.swift in Sources */,
 				25D6B68E2394C50600F713C4 /* AppDelegate.swift in Sources */,
 				25D6B6982394C50600F713C4 /* SocDrawr1_1.xcdatamodeld in Sources */,
 				25D6B6902394C50600F713C4 /* SceneDelegate.swift in Sources */,
