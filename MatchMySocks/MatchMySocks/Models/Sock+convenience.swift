@@ -1,9 +1,9 @@
 //
-//  Sock+Convenience.swift
-//  SocDrawr1.1
+//  Sock+convenience.swift
+//  MatchMySocks
 //
-//  Created by Ian Hall on 12/1/19.
-//  Copyright © 2019 Ian Hall. All rights reserved.
+//  Created by Ian Hall on 2/5/20.
+//  Copyright © 2020 Ian Hall. All rights reserved.
 //
 
 import Foundation
@@ -19,8 +19,10 @@ extension Sock {
         self.secondaryColor = secondaryColor
         self.vibe = ""
         self.note = ""
+        self.isLeftMissing = false
+        self.isRightMissing = false
+        self.isFavorite = false
     }
-    
     var photo: UIImage? {
         get {
             guard let photoData = photoData else { return nil }
@@ -29,4 +31,5 @@ extension Sock {
             photoData = newValue?.jpegData(compressionQuality: 0.5)
         }
     }
+    
 }
