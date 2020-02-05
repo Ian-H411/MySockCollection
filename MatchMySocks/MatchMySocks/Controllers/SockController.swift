@@ -14,12 +14,14 @@ class SockController {
     
     static let shared: SockController = SockController()
     
+    var chunkedSocks: [[Sock]] = [[]]
     var sockDrawer: [Sock] = []
     
     init() {
         let fetchRequest: NSFetchRequest<Sock> = Sock.fetchRequest()
         let moc = CoreDataStack.context
         sockDrawer = (try? moc.fetch(fetchRequest)) ?? []
+        chunkedSocks = sockDrawer.chunked(by: 2)
     }
     
     //MARK: - CREATE
@@ -73,13 +75,6 @@ class SockController {
         sock.vibe = vibe
         saveToPersistenceStore()
     }
-    
-    //change website
-    func changeSocksWebsite(sock: Sock, website: String) {
-        sock.websiteLink = website
-        saveToPersistenceStore()
-    }
-    
     
     //change colors
     func changeSocksPrimary(sock: Sock, primary color: String) {

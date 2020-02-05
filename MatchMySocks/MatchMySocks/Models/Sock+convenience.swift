@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 import UIKit.UIImage
 
-extension Sock {
+extension Sock: Identifiable {
     convenience init(name: String, isFavorite: Bool, PrimaryColor: String, secondaryColor: String, moc: NSManagedObjectContext = CoreDataStack.context) {
         self.init(context: moc)
         self.name = name
