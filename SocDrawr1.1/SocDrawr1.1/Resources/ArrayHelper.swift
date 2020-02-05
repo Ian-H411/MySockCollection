@@ -6,11 +6,13 @@
 //  Copyright © 2020 Ian Hall. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension Array {
     
-    func chunked(by: Int) -> [[Element]] {
-        
+    func chunked(by size: Int) -> [[Element]] {
+        return stride(from: 0, to: count, by: size).map {
+            Array(self[0..<Swift.min($0 + size, count)])
+        }
     }
 }
