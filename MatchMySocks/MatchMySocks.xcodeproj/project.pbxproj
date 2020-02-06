@@ -20,7 +20,7 @@
 		2573D34923EB616900675F42 /* ArrayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2573D34823EB616900675F42 /* ArrayHelper.swift */; };
 		2573D34B23EB62E100675F42 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2573D34A23EB62E100675F42 /* Default-568h@2x.png */; };
 		2573D34F23EB632200675F42 /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2573D34E23EB632200675F42 /* GridCell.swift */; };
-		2573D35123EC8B9900675F42 /* AddNewPairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2573D35023EC8B9900675F42 /* AddNewPairView.swift */; };
+		2573D35923ECB7D700675F42 /* AddPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2573D35823ECB7D700675F42 /* AddPair.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,7 @@
 		2573D34823EB616900675F42 /* ArrayHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayHelper.swift; sourceTree = "<group>"; };
 		2573D34A23EB62E100675F42 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2573D34E23EB632200675F42 /* GridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
-		2573D35023EC8B9900675F42 /* AddNewPairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPairView.swift; sourceTree = "<group>"; usesTabs = 0; };
+		2573D35823ECB7D700675F42 /* AddPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPair.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +142,7 @@
 			children = (
 				2573D33523EB5D4E00675F42 /* LaunchScreen.storyboard */,
 				2573D32E23EB5D4900675F42 /* ContentView.swift */,
-				2573D35023EC8B9900675F42 /* AddNewPairView.swift */,
+				2573D35823ECB7D700675F42 /* AddPair.swift */,
 			);
 			path = "Main Views";
 			sourceTree = "<group>";
@@ -220,13 +220,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2573D34723EB607400675F42 /* SockController.swift in Sources */,
-				2573D35123EC8B9900675F42 /* AddNewPairView.swift in Sources */,
 				2573D32823EB5D4900675F42 /* AppDelegate.swift in Sources */,
 				2573D32D23EB5D4900675F42 /* MatchMySocks.xcdatamodeld in Sources */,
 				2573D34923EB616900675F42 /* ArrayHelper.swift in Sources */,
 				2573D32F23EB5D4900675F42 /* ContentView.swift in Sources */,
 				2573D34F23EB632200675F42 /* GridCell.swift in Sources */,
 				2573D34523EB5EEB00675F42 /* CoreDataStack.swift in Sources */,
+				2573D35923ECB7D700675F42 /* AddPair.swift in Sources */,
 				2573D32A23EB5D4900675F42 /* SceneDelegate.swift in Sources */,
 				2573D34323EB5EB500675F42 /* Sock+convenience.swift in Sources */,
 			);
