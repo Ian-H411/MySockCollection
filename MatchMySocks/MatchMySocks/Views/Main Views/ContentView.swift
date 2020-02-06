@@ -12,16 +12,6 @@ struct ContentView: View {
     let socksChunked = SockController.shared.chunkedSocks
     var body: some View {
         NavigationView {
-            Form {
-                Section {
-                    Text("My Socks")
-                    .hidden()
-                }
-            }
-            .navigationBarTitle("My Socks")
-            .navigationBarItems(trailing: Button("Camera", action: {
-                print("Go to Camera")
-            }))
             List {
                 ForEach(0..<socksChunked.count, id: \.self) { index in
                     HStack {
@@ -32,6 +22,7 @@ struct ContentView: View {
                 }
                 
             }
+        .navigationBarTitle("My Socks")
         }
     }
 }
