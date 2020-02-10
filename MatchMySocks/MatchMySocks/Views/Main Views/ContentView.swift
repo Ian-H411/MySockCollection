@@ -21,7 +21,10 @@ struct ContentView: View {
                     }
                 }
                 
-            }
+            }.navigationBarItems(trailing: NavigationLink(destination: AddPair(), label: {
+                Text("add")
+            }))
+                
         .navigationBarTitle("My Socks")
         }
     }
