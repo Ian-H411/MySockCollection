@@ -29,7 +29,6 @@ struct AddPair: View {
                     .clipShape(Circle())
                     .overlay(Circle().stroke(Color.white, lineWidth: 4))
                     .shadow(radius: 0.5)
-                    
                     .frame(width: 350, height: 350, alignment: .center)
             }
             if (showCaptureImageView) {
@@ -42,18 +41,18 @@ struct AddPair: View {
 }
 
 struct CaptureImageView {
-    /// MARK: - Properties
+  
     @Binding var isShown: Bool
     @Binding var image: Image?
-    
     func makeCoordinator() -> Coordinator {
       return Coordinator(isShown: $isShown, image: $image)
     }
+    
 }
 
 extension CaptureImageView: UIViewControllerRepresentable {
+    
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<CaptureImageView>) {
-        
     }
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<CaptureImageView>) -> UIImagePickerController {
@@ -72,12 +71,14 @@ class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerContro
     _isCoordinatorShown = isShown
     _imageInCoordinator = image
   }
+    
   func imagePickerController(_ picker: UIImagePickerController,
                 didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
      guard let unwrapImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
      imageInCoordinator = Image(uiImage: unwrapImage)
      isCoordinatorShown = false
   }
+    
   func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
      isCoordinatorShown = false
   }
