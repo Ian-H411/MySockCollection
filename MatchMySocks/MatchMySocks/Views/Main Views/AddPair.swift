@@ -11,17 +11,20 @@ import UIKit.UIImage
 
 struct AddPair: View {
     let defaultImage = "empty"
+    @State var image: Image? = nil
     @State private var textField = ""
+    @State var showCaptureImageView: Bool = false
     var body: some View {
         VStack {
             TextField("Name This Pair of Socks", text: $textField)
             Divider()
             ZStack{
                 Button(action: {
-                    self.addPhotoButtonTapped()
+                    self.showCaptureImageView.toggle()
                 }) {
                     Text("")
                 }
+                .clipShape(Circle())
                 Image(defaultImage).resizable()
                     .clipShape(Circle())
                     .overlay(Circle().stroke(Color.white, lineWidth: 4))
@@ -29,66 +32,55 @@ struct AddPair: View {
                     
                     .frame(width: 350, height: 350, alignment: .center)
             }
+            if (showCaptureImageView) {
+              CaptureImageView(isShown: $showCaptureImageView, image: $image)
+            }
             
         }.padding()
     }
+   
+}
+
+struct CaptureImageView {
+    /// MARK: - Properties
+    @Binding var isShown: Bool
+    @Binding var image: Image?
     
-    func addPhotoButtonTapped() {
-        
+    func makeCoordinator() -> Coordinator {
+      return Coordinator(isShown: $isShown, image: $image)
     }
 }
 
-struct ImagePicker : UIViewControllerRepresentable {
-    
-    @Binding var isShown    : Bool
-    @Binding var image      : Image?
-    
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
+extension CaptureImageView: UIViewControllerRepresentable {
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<CaptureImageView>) {
         
     }
     
-    func makeCoordinator() -> ImagePickerCordinator {
-        return ImagePickerCordinator(isShown: $isShown, image: $image)
-    }
-    
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
+    func makeUIViewController(context: UIViewControllerRepresentableContext<CaptureImageView>) -> UIImagePickerController {
         let picker = UIImagePickerController()
-        picker.delegate = context.coordinator
-        return picker
+               picker.delegate = context.coordinator
+               return picker
     }
+    
+    typealias UIViewControllerType = UIImagePickerController
     
 }
-class ImagePickerCordinator : NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
-    
-    @Binding var isShown    : Bool
-    @Binding var image      : Image?
-    
-    init(isShown : Binding<Bool>, image: Binding<Image?>) {
-        _isShown = isShown
-        _image   = image
-    }
-    
-    //Selected Image
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let uiImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        image = Image(uiImage: uiImage)
-        isShown = false
-    }
-    
-    //Image selection got cancel
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        isShown = false
-    }
-}
-
-struct PhotoCaptureView: View {
-    
-    @Binding var showImagePicker    : Bool
-    @Binding var image              : Image?
-    
-    var body: some View {
-        ImagePicker(isShown: $showImagePicker, image: $image)
-    }
+class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+  @Binding var isCoordinatorShown: Bool
+  @Binding var imageInCoordinator: Image?
+  init(isShown: Binding<Bool>, image: Binding<Image?>) {
+    _isCoordinatorShown = isShown
+    _imageInCoordinator = image
+  }
+  func imagePickerController(_ picker: UIImagePickerController,
+                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+     guard let unwrapImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+     imageInCoordinator = Image(uiImage: unwrapImage)
+     isCoordinatorShown = false
+  }
+  func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+     isCoordinatorShown = false
+  }
 }
 
 struct AddPair_Previews: PreviewProvider {
