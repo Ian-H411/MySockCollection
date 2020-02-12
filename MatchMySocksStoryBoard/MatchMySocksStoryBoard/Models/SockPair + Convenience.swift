@@ -9,9 +9,10 @@
 import Foundation
 import CoreData
 import UIKit.UIImage
+import UIKit.UIColor
 
 extension SockPair {
-    convenience init (name: String, primaryColor: String, secondaryColor: String, note: String, lastWorn: Date = Date(), moc: NSManagedObjectContext = CoreDataStack.context) {
+    convenience init (name: String, note: String, lastWorn: Date = Date(), moc: NSManagedObjectContext = CoreDataStack.context) {
         self.init(context: moc)
         self.name = name
         self.lastWorn = lastWorn

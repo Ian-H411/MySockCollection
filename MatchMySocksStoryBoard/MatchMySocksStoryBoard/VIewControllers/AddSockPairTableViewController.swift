@@ -50,6 +50,8 @@ class AddSockPairTableViewController: UITableViewController {
     //MARK: - Actions
     
     @IBAction func primaryColorBtnTapped(_ sender: Any) {
+        
+        
     }
     
     @IBAction func secondaryColorBtnTapped(_ sender: Any) {
@@ -80,9 +82,10 @@ class AddSockPairTableViewController: UITableViewController {
             guard let sock = selectedSock else {return}
             if let picture = sock.photo {
                 sockImage.image = picture
+                let colors = picture.getColors()
+                primaryColorBtn.backgroundColor = colors.primary
+                secondaryColorBtn.backgroundColor = colors.secondary
             }
-            primaryColorBtn.setTitle(sock.primaryColor, for: .normal)
-            secondaryColorBtn.setTitle(sock.secondaryColor, for: .normal)
             newNameTxtField.text = sock.name
             isFavoriteSwitch.setOn(sock.isFavorite, animated: true)
             isFavorite = sock.isFavorite
@@ -92,6 +95,13 @@ class AddSockPairTableViewController: UITableViewController {
     
     func saveData() {
         
+    }
+    
+    func setColorsFromImage() {
+        guard let image = sockImage.image else {return}
+        let colors = image.getColors()
+        primaryColorBtn.backgroundColor = colors.primary
+        secondaryColorBtn.backgroundColor = colors.secondary
     }
     
 }
@@ -150,6 +160,7 @@ extension AddSockPairTableViewController: UIImagePickerControllerDelegate, UINav
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage{
             sockImage.image = image
+            setColorsFromImage()
         } else {
             print("Something went wrong")
         }

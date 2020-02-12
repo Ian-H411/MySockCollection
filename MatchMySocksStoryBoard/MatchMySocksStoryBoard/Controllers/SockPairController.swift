@@ -27,10 +27,7 @@ class SockController {
     //MARK: - CREATE
     @discardableResult func create(sockName: String, note: String, primaryColor: String, secondaryColor: String, image: UIImage?) -> SockPair {
         
-        let newSock = SockPair(name: sockName,
-                               primaryColor: primaryColor,
-                               secondaryColor: secondaryColor,
-                               note: note)
+        let newSock = SockPair(name: sockName, note: note)
         if let sockPic = image {
             changeSocksPhoto(sock: newSock, image: sockPic)
         }
@@ -56,17 +53,6 @@ class SockController {
     //change note
     func changeNote(sock: SockPair, note: String) {
         sock.note = note
-        saveToPersistenceStore()
-    }
-    
-    //change colors
-    func changeSocksPrimary(sock: SockPair, primary color: String) {
-        sock.primaryColor = color
-        saveToPersistenceStore()
-    }
-    
-    func changeSocksSecondary(sock: SockPair, secondary color: String) {
-        sock.secondaryColor = color
         saveToPersistenceStore()
     }
     

@@ -6,10 +6,8 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="note" optional="YES" attributeType="String"/>
         <attribute name="photoData" optional="YES" attributeType="Binary"/>
-        <attribute name="primaryColor" optional="YES" attributeType="String"/>
-        <attribute name="secondaryColor" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="SockPair" positionX="-54" positionY="-9" width="128" height="148"/>
+        <element name="SockPair" positionX="-54" positionY="-9" width="128" height="118"/>
     </elements>
 </model>
