@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="SockPair" representedClassName="SockPair" syncable="YES" codeGenerationType="class">
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="lastWorn" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="note" optional="YES" attributeType="String"/>
@@ -9,6 +10,6 @@
         <attribute name="secondaryColor" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="SockPair" positionX="-54" positionY="-9" width="128" height="133"/>
+        <element name="SockPair" positionX="-54" positionY="-9" width="128" height="148"/>
     </elements>
 </model>

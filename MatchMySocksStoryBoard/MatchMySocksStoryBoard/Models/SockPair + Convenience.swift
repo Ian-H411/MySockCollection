@@ -16,6 +16,7 @@ extension SockPair {
         self.name = name
         self.lastWorn = lastWorn
         self.note = note
+        self.isFavorite = false
     }
     
     var photo: UIImage? {
