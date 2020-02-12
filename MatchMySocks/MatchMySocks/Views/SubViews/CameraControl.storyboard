@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera Control View Controller-->
+        <scene sceneID="KHJ-YD-iZS">
+            <objects>
+                <viewController id="0dq-yl-Lfk" customClass="CameraControlViewController" customModule="MatchMySocks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rkZ-Hr-zkR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hS7-hl-oWD">
+                                <rect key="frame" x="41.5" y="288" width="331" height="329"/>
+                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hS7-hl-oWD" secondAttribute="height" multiplier="1:1" id="YiN-NH-pzH"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPR-cv-dZE">
+                                <rect key="frame" x="41.5" y="287.5" width="331" height="331"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="0dq-yl-Lfk" eventType="touchUpInside" id="Qkw-5Y-Wq2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hS7-hl-oWD" firstAttribute="centerY" secondItem="HNu-MK-lcl" secondAttribute="centerY" id="GWb-m2-Xl1"/>
+                            <constraint firstItem="OPR-cv-dZE" firstAttribute="centerY" secondItem="hS7-hl-oWD" secondAttribute="centerY" id="PzT-jK-q4o"/>
+                            <constraint firstItem="hS7-hl-oWD" firstAttribute="width" secondItem="rkZ-Hr-zkR" secondAttribute="width" multiplier="0.8" id="c5T-Bz-UcQ"/>
+                            <constraint firstItem="OPR-cv-dZE" firstAttribute="centerX" secondItem="hS7-hl-oWD" secondAttribute="centerX" id="mr7-oG-Noo"/>
+                            <constraint firstItem="hS7-hl-oWD" firstAttribute="centerX" secondItem="HNu-MK-lcl" secondAttribute="centerX" id="sya-zI-0R3"/>
+                            <constraint firstItem="OPR-cv-dZE" firstAttribute="width" secondItem="hS7-hl-oWD" secondAttribute="width" id="v5d-7R-oiC"/>
+                            <constraint firstItem="OPR-cv-dZE" firstAttribute="height" secondItem="hS7-hl-oWD" secondAttribute="height" id="vSs-7j-AEG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HNu-MK-lcl"/>
+                    </view>
+                    <connections>
+                        <outlet property="sockPic" destination="hS7-hl-oWD" id="rMb-qk-l5h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mdW-C3-o7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="135.9375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="64" height="48"/>
+    </resources>
+</document>
