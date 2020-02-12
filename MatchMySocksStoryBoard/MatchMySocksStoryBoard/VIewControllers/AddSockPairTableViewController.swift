@@ -59,6 +59,8 @@ class AddSockPairTableViewController: UITableViewController {
     
     @IBAction func isFavoriteSliderTapped(_ sender: UISwitch) {
         isFavorite.toggle()
+        guard let sock = selectedSock else {return}
+        SockController.shared.toggleFavorite(sock: sock)
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
@@ -94,7 +96,22 @@ class AddSockPairTableViewController: UITableViewController {
     }
     
     func saveData() {
-        
+        guard let name = newNameTxtField.text,
+            let image = sockImage.image,
+            let note = notesTextField.text else {return}
+        if isInEditMode {
+            guard let sock = selectedSock else {return}
+            SockController.shared.changeNote(sock: sock, note: note)
+            SockController.shared.changeSocksPhoto(sock: sock, image: image)
+            SockController.shared.changeSockName(sock: sock, name: name)
+            
+        } else {
+            let sock = SockController.shared.create(sockName: name, note: note, image: nil)
+            SockController.shared.changeSocksPhoto(sock: sock, image: image)
+            
+        }
+        self.navigationController?.popViewController(animated: true)
+
     }
     
     func setColorsFromImage() {

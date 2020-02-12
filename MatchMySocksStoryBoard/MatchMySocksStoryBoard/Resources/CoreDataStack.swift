@@ -14,7 +14,7 @@ class CoreDataStack {
     
     static let container: NSPersistentContainer = {
         
-        let container = NSPersistentContainer(name: "MatchMySocksStoryboard")
+        let container = NSPersistentContainer(name: "MatchMySocksStoryBoard")
         container.loadPersistentStores(){ (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("unresolved error\(error), \(error.userInfo)")

@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+
 
 class SockCollectionViewController: UICollectionViewController {
 
@@ -17,11 +17,7 @@ class SockCollectionViewController: UICollectionViewController {
     
     //MARK: - variables
     
-    private let sectionInsets = UIEdgeInsets(top: 50.0,
-    left: 20.0,
-    bottom: 50.0,
-    right: 20.0)
-    
+    private let reuseIdentifier = "SockCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +31,24 @@ class SockCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        collectionView.reloadData()
+    }
+
+    // MARK: UICollectionViewDataSource
+
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return SockController.shared.sockDrawer.count
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? SockPairCollectionViewCell else {return UICollectionViewCell()}
+        let sock = SockController.shared.sockDrawer[indexPath.row]
+        cell.updateCell(sock: sock)
+        return cell
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -45,25 +59,6 @@ class SockCollectionViewController: UICollectionViewController {
     }
     */
 
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return SockController.shared.chunkedSocks.count
-    }
-
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return SockController.shared.chunkedSocks[section].count
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? SockPairCollectionViewCell else {return UICollectionViewCell()}
-        let sock = SockController.shared.chunkedSocks[indexPath.row][indexPath.section]
-        cell.updateCell(sock: sock)
-        return cell
-    }
 
     // MARK: UICollectionViewDelegate
 

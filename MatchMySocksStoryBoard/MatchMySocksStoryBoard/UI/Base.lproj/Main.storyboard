@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +22,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="rjb-Gp-zn7" customClass="SockPairCollectionViewCell" customModule="MatchMySocksStoryBoard" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SockCell" id="rjb-Gp-zn7" customClass="SockPairCollectionViewCell" customModule="MatchMySocksStoryBoard" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="193" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GyZ-Bt-R9r">
@@ -184,10 +183,8 @@
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLl-RN-OMv">
                                                                     <rect key="frame" x="201.5" y="0.0" width="171.5" height="60"/>
-                                                                    <state key="normal" title="Button"/>
                                                                     <connections>
                                                                         <action selector="primaryColorBtnTapped:" destination="ehY-5h-ZrM" eventType="touchUpInside" id="kvQ-6w-HcX"/>
-                                                                        <segue destination="vcv-rl-4gY" kind="show" id="a08-8h-6PA"/>
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
@@ -209,10 +206,8 @@
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVE-SK-3P1">
                                                                     <rect key="frame" x="201.5" y="0.0" width="171.5" height="60"/>
-                                                                    <state key="normal" title="Button"/>
                                                                     <connections>
                                                                         <action selector="secondaryColorBtnTapped:" destination="ehY-5h-ZrM" eventType="touchUpInside" id="V2P-m3-rqs"/>
-                                                                        <segue destination="vcv-rl-4gY" kind="show" id="RwO-Es-ip1"/>
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
@@ -235,15 +230,15 @@
                             </tableViewSection>
                             <tableViewSection id="laj-Tj-Aco">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="67" id="20s-Ds-v1d">
-                                        <rect key="frame" x="0.0" y="807" width="414" height="67"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="20s-Ds-v1d">
+                                        <rect key="frame" x="0.0" y="807" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="20s-Ds-v1d" id="jSp-jp-NIe">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="lvX-Tc-5bm">
-                                                    <rect key="frame" x="20.5" y="3.5" width="373" height="60"/>
+                                                    <rect key="frame" x="20.5" y="0.0" width="373" height="60"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T23-QW-Tvd">
                                                             <rect key="frame" x="0.0" y="0.0" width="272" height="60"/>
@@ -267,7 +262,6 @@
                                                 <constraint firstItem="lvX-Tc-5bm" firstAttribute="width" secondItem="jSp-jp-NIe" secondAttribute="width" multiplier="0.9" id="1WY-IQ-afn"/>
                                                 <constraint firstItem="lvX-Tc-5bm" firstAttribute="centerX" secondItem="jSp-jp-NIe" secondAttribute="centerX" id="H4D-vu-DDJ"/>
                                                 <constraint firstItem="lvX-Tc-5bm" firstAttribute="centerY" secondItem="jSp-jp-NIe" secondAttribute="centerY" id="M7d-pl-dLA"/>
-                                                <constraint firstItem="lvX-Tc-5bm" firstAttribute="height" secondItem="jSp-jp-NIe" secondAttribute="height" multiplier="0.895522" id="TYu-yb-x0D"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -276,7 +270,7 @@
                             <tableViewSection headerTitle="Notes" id="0vY-Uh-ThK">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="214" id="REW-34-zXx">
-                                        <rect key="frame" x="0.0" y="930" width="414" height="214"/>
+                                        <rect key="frame" x="0.0" y="923" width="414" height="214"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="REW-34-zXx" id="ViH-xo-u4b">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="214"/>
@@ -327,57 +321,6 @@
             </objects>
             <point key="canvasLocation" x="1691.304347826087" y="169.41964285714286"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="EIs-8Q-7RG">
-            <objects>
-                <viewController id="vcv-rl-4gY" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jea-yH-B6g">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dT5-2u-WzS">
-                                <rect key="frame" x="20" y="231" width="376" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MRm-Yw-BO0">
-                                <rect key="frame" x="20" y="312" width="376" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ohb-Q3-rDP">
-                                <rect key="frame" x="18" y="412" width="376" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtD-tG-8Pj">
-                                <rect key="frame" x="20" y="183" width="128" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3j-aF-Xbg">
-                                <rect key="frame" x="20" y="349" width="128" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMb-mk-hwI">
-                                <rect key="frame" x="22" y="264" width="128" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="1Qt-58-g8t"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="cJN-Nn-JqE"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xqh-q0-t63" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2637.68115942029" y="168.75"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="n1M-0C-h11">
             <objects>
@@ -398,7 +341,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RwO-Es-ip1"/>
         <segue reference="ASP-lS-5w7"/>
     </inferredMetricsTieBreakers>
 </document>
