@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		25374F5B23F4625D00E356D5 /* SockPairCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25374F5A23F4625D00E356D5 /* SockPairCollectionViewCell.swift */; };
+		25374F5D23F4837300E356D5 /* AddSockPairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25374F5C23F4837300E356D5 /* AddSockPairTableViewController.swift */; };
+		25374F5F23F48FC100E356D5 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25374F5E23F48FC100E356D5 /* ColorHelper.swift */; };
 		2573D3DB23F452A600675F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2573D3DA23F452A600675F42 /* AppDelegate.swift */; };
 		2573D3DD23F452A600675F42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2573D3DC23F452A600675F42 /* SceneDelegate.swift */; };
 		2573D3E223F452A600675F42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2573D3E023F452A600675F42 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		25374F5A23F4625D00E356D5 /* SockPairCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SockPairCollectionViewCell.swift; sourceTree = "<group>"; };
+		25374F5C23F4837300E356D5 /* AddSockPairTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSockPairTableViewController.swift; sourceTree = "<group>"; };
+		25374F5E23F48FC100E356D5 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 		2573D3D723F452A600675F42 /* MatchMySocksStoryBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchMySocksStoryBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2573D3DA23F452A600675F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2573D3DC23F452A600675F42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 			children = (
 				25374F5923F4624000E356D5 /* SubViewControllers */,
 				2573D3FF23F45A0300675F42 /* SockCollectionViewController.swift */,
+				25374F5C23F4837300E356D5 /* AddSockPairTableViewController.swift */,
 			);
 			path = VIewControllers;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 				2573D3E623F452A800675F42 /* Assets.xcassets */,
 				2573D3F923F454B400675F42 /* CoreDataStack.swift */,
 				2573D3FD23F458C800675F42 /* ArrayExtensions.swift */,
+				25374F5E23F48FC100E356D5 /* ColorHelper.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -209,7 +215,9 @@
 				2573D3DB23F452A600675F42 /* AppDelegate.swift in Sources */,
 				2573D3FE23F458C800675F42 /* ArrayExtensions.swift in Sources */,
 				2573D3E523F452A600675F42 /* MatchMySocksStoryBoard.xcdatamodeld in Sources */,
+				25374F5D23F4837300E356D5 /* AddSockPairTableViewController.swift in Sources */,
 				2573D3FC23F4571900675F42 /* SockPairController.swift in Sources */,
+				25374F5F23F48FC100E356D5 /* ColorHelper.swift in Sources */,
 				2573D3DD23F452A600675F42 /* SceneDelegate.swift in Sources */,
 				2573D3F823F4549B00675F42 /* SockPair + Convenience.swift in Sources */,
 				25374F5B23F4625D00E356D5 /* SockPairCollectionViewCell.swift in Sources */,
